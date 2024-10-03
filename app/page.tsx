@@ -22,7 +22,11 @@ export const metadata: Metadata = {
   description: "Next 공부 기록용 메인 페이지 입니다.",
 };
 
-const MainPage = () => {
+import { getServerSession } from "next-auth";
+import { authOptions } from "../pages/api/auth/[...nextauth].js";
+
+const MainPage = async () => {
+  const res = await getServerSession(authOptions);
   return (
     <div>
       <h2 className="text-2xl flex justify-center p-20 border">메인 페이지</h2>
@@ -41,7 +45,7 @@ const MainPage = () => {
         </li>
       </div>
       <div className="flex justify-center py-20">
-        <Login />
+        <Login userInfo={res?.user} />
       </div>
     </div>
   );
