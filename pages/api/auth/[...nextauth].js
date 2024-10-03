@@ -9,18 +9,18 @@ export const authOptions = {
   providers: [
     // 네이버 인증 제공자 설정
     Naver({
-      clientId: process.env.NAVER_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
-      clientSecret: process.env.NAVER_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
+      clientId: process.env.NEXT_PUBLIC_NAVER_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
+      clientSecret: process.env.NEXT_PUBLIC_NAVER_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
     }),
     // // 구글 인증 제공자 설정
     Google({
-      clientId: process.env.GOOGLE_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
     }),
     // 깃허브 인증 제공자 설정
     Github({
-      clientId: process.env.GITHUB_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
-      clientSecret: process.env.GITHUB_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
+      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID, // .env 파일에서 클라이언트 ID 가져오기
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET, // .env 파일에서 클라이언트 비밀 키 가져오기
     }),
   ],
   secret: "!12@984#alciw&4^5", // JWT 생성 시 쓰는 암호
