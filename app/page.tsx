@@ -43,6 +43,12 @@ const MainPage = async () => {
             test
           </Link>
         </li>
+        <li>
+          {/* ai 로 이동 */}
+          <Link href="/ai" className="hover:font-bold">
+            ai
+          </Link>
+        </li>
       </div>
       <div className="flex justify-center py-20">
         <Login userInfo={res?.user} />
